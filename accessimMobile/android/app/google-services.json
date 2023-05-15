@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "449927592576",
+    "firebase_url": "https://accessim-2ae77-default-rtdb.firebaseio.com",
+    "project_id": "accessim-2ae77",
+    "storage_bucket": "accessim-2ae77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449927592576:android:9844e1e047e02ba4350465",
+        "android_client_info": {
+          "package_name": "com.accessimmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449927592576-8uat5u46h9iktvkhmp6fbs63rhudnh33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP05IjwRFKYDaUyG11WhK0UTnB6V29-kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449927592576-8uat5u46h9iktvkhmp6fbs63rhudnh33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
