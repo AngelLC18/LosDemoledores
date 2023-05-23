@@ -7,7 +7,7 @@ import Textarea from "./MasInfo";
 function FormRegistro() {
     return (
       <div>
-        <h1>holaaa</h1>
+        <h1>Registrar Servicio</h1>
         <InputString />
         <Select />
         <Checklist />
