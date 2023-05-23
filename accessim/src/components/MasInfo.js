@@ -1,8 +1,8 @@
 import React from "react";
 
-function Textarea(){
+function MasInfo(){
     return(
         <textarea placeholder="Mas Info"></textarea>
     );
 }
-export default Textarea;
+export default MasInfo;
