@@ -1,9 +1,7 @@
+import Rutas from "./routes/Routes";
+
 function App() {
-  return (
-    <>
-      <div></div>
-    </>
-  );
+  return <Rutas />;
 }
 
 export default App;
