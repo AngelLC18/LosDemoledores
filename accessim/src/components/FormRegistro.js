@@ -2,8 +2,8 @@ import React from "react";
 import Checklist from "./Checklist";
 import InputString from "./InputString";
 import Select from "./Select";
-import MasInfo from "./MasInfo"
-
+import MasInfo from "./MasInfo";
+import Footer from "./Footer";
 
 function FormRegistro() {
     return (
@@ -26,8 +26,11 @@ function FormRegistro() {
         <Checklist span="Remember me"/>
        </div>
        <MasInfo placeholder="Agregue su información adicional aqui"/>
-      
+      <div className="footer">
+        <Footer />
+      </div>
       </div>  
+    
     );
   }
   
