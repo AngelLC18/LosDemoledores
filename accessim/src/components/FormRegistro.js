@@ -3,11 +3,11 @@ import Checklist from "./Checklist";
 import InputString from "./InputString";
 import Select from "./Select";
 import MasInfo from "./MasInfo";
-import Footer from "./Footer";
+
 
 function FormRegistro() {
     return (
-      <div className ='bg-white border-2 rounded-xl flex justify-center flex-col flex-wrap h-[600px] w-[500px] p-4 gap-4'> 
+      <div className ='bg-white border-2  m-20-20-20-30 mb-50 rounded-xl flex justify-center flex-col flex-wrap h-[600px] w-[500px] p-4 gap-4'> 
         <InputString placeholder="Nombre del Servicio" />        
         <InputString placeholder="Horario" />
         <InputString placeholder="Ubicación" />
@@ -26,9 +26,7 @@ function FormRegistro() {
         <Checklist span="Remember me"/>
        </div>
        <MasInfo placeholder="Agregue su información adicional aqui"/>
-      <div className="footer">
-        <Footer />
-      </div>
+      
       </div>  
     
     );
