@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 
 function Footer () {
     return(
@@ -35,3 +36,13 @@ function Footer () {
 }
 export default Footer;
 
+=======
+function Footer (){
+    return(
+        <footer className="flex justify-bottom footer footer-bottom p-10 bg-primary text-primary-content ">
+            
+        </footer>
+    )
+}
+export default Footer; 
+>>>>>>> sara

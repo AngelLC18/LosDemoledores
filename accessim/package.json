@@ -6,7 +6,10 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "daisyui": "^2.52.0",
+=======
+>>>>>>> sara
     "firebase": "^9.22.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -38,7 +41,25 @@
       "last 1 safari version"
     ]
   },
+<<<<<<< HEAD
   "devDependencies": {
     "tailwindcss": "^3.3.2"
   }
+=======
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelLC18/LosDemoledores.git"
+  },
+  "keywords": [
+    "AccesSim"
+  ],
+  "author": "Los Demoledores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelLC18/LosDemoledores/issues"
+  },
+  "homepage": "https://github.com/AngelLC18/LosDemoledores#readme"
+>>>>>>> sara
 }

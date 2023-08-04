@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 function Checklist(props) {
     return(
         <label className="cursor-pointer label">
@@ -11,5 +12,13 @@ function Checklist(props) {
             </div>
         </label>
     )
+=======
+function Checklist() {
+    return(
+       <checklist>
+    
+       </checklist> 
+    );
+>>>>>>> sara
 }
 export default Checklist;

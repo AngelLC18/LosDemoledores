@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 import './App.css';
 import React from 'react';
 import FormRegistro from './components/FormRegistro';
 import Footer from './components/Footer';
 
+=======
+import React from "react";
+import FormRegistro from "./components/FormRegistro";
+//import './App.css';
+
+function App() {
+  return (
+    <FormRegistro />
+  );
+}
+>>>>>>> sara
 
 function App(){
     return (

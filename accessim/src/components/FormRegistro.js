@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import Checklist from "./Checklist";
 import InputString from "./InputString";
 import Select from "./Select";
@@ -34,3 +35,23 @@ function FormRegistro() {
   
 export default FormRegistro;
 
+=======
+import InputString from "./InputString";
+import Select from "./Select";
+import Checklist from "./Checklist";
+import Textarea from "./MasInfo";
+
+function FormRegistro() {
+    return (
+      <div>
+        <h1>Registrar Servicio</h1>
+        <InputString />
+        <Select />
+        <Checklist />
+        <Textarea />
+      </div>  
+    );
+  }
+  
+  export default FormRegistro;
+>>>>>>> sara
