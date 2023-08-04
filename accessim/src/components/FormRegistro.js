@@ -7,7 +7,7 @@ import MasInfo from "./MasInfo";
 
 function FormRegistro() {
     return (
-      <div className ='bg-white border-2  m-20-20-20-30 mb-50 rounded-xl flex justify-center flex-col flex-wrap h-[600px] w-[500px] p-4 gap-4'> 
+      <div className ='bg-white border-5  m-20-20-20-30 mb-40 rounded-xl flex justify-center flex-col flex-wrap h-[600px] w-[500px] p-4 gap-4'> 
         <InputString placeholder="Nombre del Servicio" />        
         <InputString placeholder="Horario" />
         <InputString placeholder="Ubicación" />
