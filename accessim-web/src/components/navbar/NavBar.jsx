@@ -11,9 +11,9 @@ const Navbar = () => {
     const navbar = document.querySelector("nav");
     document.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
-        navbar.classList.add("bg-white", "shadow-md", "dark:bg-gray-800");
+        navbar.classList.add("bg-white", "shadow-md", "dark:bg-gray-950");
       } else {
-        navbar.classList.remove("bg-white", "shadow-md", "dark:bg-gray-800");
+        navbar.classList.remove("bg-white", "shadow-md", "dark:bg-gray-950");
       }
     });
   }, []);
