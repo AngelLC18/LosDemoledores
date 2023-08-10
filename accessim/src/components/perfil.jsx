@@ -10,3 +10,4 @@ const Perfil = ({ nombre, edad, ubicacion, foto }) => {
     </div>
   );
 };
+export default Perfil;
