@@ -5,12 +5,3 @@ input[type="text"]:focus ~ .input-text,
 input[type="text"]:not(:placeholder-shown) ~ .input-text {
   @apply text-blue-600 transform -translate-y-6 -translate-x-3 scale-75;
 }
-input[type="password"]:focus ~ .input-password,
-input[type="password"]:not(:placeholder-shown) ~ .input-password {
-  @apply text-blue-600 transform -translate-y-6 -translate-x-3 scale-75;
-}
-input[type="email"]:focus ~ .input-email,
-input[type="pemail"]:not(:placeholder-shown) ~ .input-email {
-  @apply text-blue-600 transform -translate-y-6 -translate-x-3 scale-75;
-}
-
