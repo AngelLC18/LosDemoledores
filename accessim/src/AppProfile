@@ -5,3 +5,4 @@ import './App.jsx'
 
 function Profile(){
     return(
+        <div class="profile-box">
