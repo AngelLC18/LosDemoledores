@@ -1,13 +1,13 @@
 import React from "react";
-import Perfil from './componentes/perfil';
-import Menu from './componentes/menu';
+import Perfil from './components/perfil';
+import Menu from './components/menu';
 import './App.jsx'
 
 function Profile(){
     return(
         <div class="profile-box">
         <div class="profile">
-          <img src="dado.jpeg" alt="foto Perfil"/>
+          <img src="perfil" alt="foto Perfil"/>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec elit nisi. Mauris ac dolor sit amet lectus ullamcorper tristique.</p>
         </div>
       </div>
