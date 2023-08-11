@@ -2,12 +2,21 @@ import Navbar from "../components/navbar/NavBar";
 import Sidebar from "../components/sidebar/Sidebar";
 import Modals from "../components/modal/Modals";
 import Footer from "../components/footer/Footer";
-
+import {useState, useEffect} from "react";
+import AccessibilityMenu from "../components/acc"
 const Index = () => {
+  const [usuario, setUsuario] = useState({
+    usuario: "",
+    nombre: "",
+    apellido: "",
+    contraseña: "",
+    correo: "",
+  })
   return (
     <div className=" w-full min-h-screen grid grid-rows-3 dark:bg-slate-950 bg-orange-100">
       <Navbar />
       <main className="row-span-2 flex flex-col justify-center min-h-screen items-center">
+        <AccessibilityMenu />
         <div className="shadow-md rounded-xl dark:bg-slate-700 bg-white h-[400px] md:h-[400px] w-[300px] md:w-[520px] mt-4">
           <form className="  bg-white dark:bg-slate-700 h-[400px]  p-3 drop-shadow-lg rounded-xl  ">
             <div className="flex flex-row flex-wrap gap-4 p-2 justify-center">
@@ -19,6 +28,9 @@ const Index = () => {
                     className="h-11 w-56 bg-transparent pl-2 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                     autoComplete="off"
                     id="usuario"
+                    onChange={(e) =>
+                      setUsuario({ ...usuario, usuario: e.target.value })
+                    }
                   />
                   <span className="text-opacity-80 dark:text-white   dark:bg-slate-700 text-gray-600 bg-white absolute left-3 -top-[2px] px-1 transition duration-200 input-text">
                     Usuario
