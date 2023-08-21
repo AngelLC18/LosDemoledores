@@ -1,17 +1,10 @@
 import React from "react";
-import InputString from "./InputString";
-import Select from "./Select";
-import Checklist from "./Checklist";
-import Textarea from "./MasInfo";
+
 
 function FormRegistro() {
     return (
-      <div>
-        <h1>Registrar Servicio</h1>
-        <InputString />
-        <Select />
-        <Checklist />
-        <Textarea />
+      <div className=" border-5  m-20-20-20-30 mb-40 rounded-xl flex justify-center flex-col flex-wrap h-[600px] w-[500px] p-4 gap-4'"> 
+      
       </div>  
     );
   }
