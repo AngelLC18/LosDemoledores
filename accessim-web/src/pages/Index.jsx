@@ -1,9 +1,7 @@
 import Navbar from "../components/navbar/NavBar";
-import Sidebar from "../components/sidebar/Sidebar";
-import Modals from "../components/modal/Modals";
 import Footer from "../components/footer/Footer";
-import {useState, useEffect} from "react";
-import AccessibilityMenu from "../components/acc"
+import { useState, useEffect } from "react";
+import AccessibilityMenu from "../components/acc";
 const Index = () => {
   const [usuario, setUsuario] = useState({
     usuario: "",
@@ -11,9 +9,9 @@ const Index = () => {
     apellido: "",
     contraseña: "",
     correo: "",
-  })
+  });
   return (
-    <div className=" w-full min-h-screen grid grid-rows-3 dark:bg-slate-950 bg-orange-100">
+    <div className=" w-full min-h-screen grid grid-rows-3 dark:bg-gray-900 bg-orange-100">
       <Navbar />
       <main className="row-span-2 flex flex-col justify-center min-h-screen items-center">
         <AccessibilityMenu />
@@ -120,14 +118,14 @@ const Index = () => {
                   className="ml-1 bg-red-100 text-black py-2 px-6 rounded-md shadow-lg hover:bg-gray-100"
                 >
                   Iniciar sesión con google
-                  <i class="fa-brands fa-google m-2"></i>
+                  <i className="fa-brands fa-google m-2"></i>
                 </button>
                 <button
                   type="submit"
                   className="ml-1 bg-blue-800 text-white py-2 px-6 rounded-md shadow-lg hover:bg-blue-900"
                 >
                   Iniciar sesión con facebook
-                  <i class="fa-brands fa-facebook m-2"></i>
+                  <i className="fa-brands fa-facebook m-2"></i>
                 </button>
               </div>
             </div>
