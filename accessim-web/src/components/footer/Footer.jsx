@@ -14,7 +14,7 @@ const Footer = () => {
             href="https://github.com/AngelLC18/ProyectoMuniNQN"
             className="hover:underline"
           >
-            Muni Examen EPET 20™
+            AccesSim™
           </a>
           . All Rights Reserved.
         </span>
