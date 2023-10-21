@@ -1,9 +1,7 @@
 import Navbar from "../components/navbar/NavBar";
-import Sidebar from "../components/sidebar/Sidebar";
-import Modals from "../components/modal/Modals";
 import Footer from "../components/footer/Footer";
-import { useState, useEffect } from "react";
-import AccessibilityToolsButton from "../components/accesibility";
+import { useState } from "react";
+import Accesibility_tools from "../components/Accessibility_tools";
 
 const Index = () => {
   const [usuario, setUsuario] = useState({
@@ -17,9 +15,8 @@ const Index = () => {
     <div className=" w-full min-h-screen grid grid-rows-3 dark:bg-slate-950 bg-orange-100">
       <Navbar />
       <main className="row-span-2 flex flex-col justify-center min-h-screen items-center">
-        <AccessibilityToolsButton />
-        <div className="shadow-md rounded-xl dark:bg-slate-700 bg-white h-[400px] md:h-[400px] w-[300px] md:w-[520px] mt-4">
-          <form className="  bg-white dark:bg-slate-700 h-[400px]  p-3 drop-shadow-lg rounded-xl  ">
+        <div className="shadow-md rounded-xl dark:bg-slate-700 bg-white h-[600px] w-[80%]  mt-4">
+          <form className="  bg-white dark:bg-slate-700 h-full w-[50%] p-3 drop-shadow-lg rounded-xl  ">
             <div className="flex flex-row flex-wrap gap-4 p-2 justify-center">
               <div className="w-56">
                 <label className="relative cursor-text ">
@@ -136,6 +133,7 @@ const Index = () => {
         </div>
       </main>
       <Footer />
+      <Accesibility_tools />
     </div>
   );
 };
