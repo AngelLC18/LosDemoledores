@@ -18,10 +18,10 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <nav className="bg-transparent dark:bg-slate-900 fixed w-full z-20 top-0 left-0 transition-all">
+    <nav className="bg-transparent dark:bg-gray-900 fixed w-full z-20 top-0 left-0 transition-all">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
         <a href="http://epet20.com.ar/">
-          <i className="fa-solid fa-code dark:text-white"></i>
+          <i className="fa-solid fa-code"></i>
         </a>
         <div className="flex md:order-2">
           <DarkMode />
@@ -56,7 +56,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded-2xl md:bg-white md:bg-opacity-5 hover:bg-gray-100 md:hover:scale-105 md:hover:text-blue-700 md:p-2 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:bg-opacity-20 dark:hover:text-white md:dark:hover:scale-105  dark:border-gray-700"
+                className="block py-2 pl-3 pr-4 text-gray-900  rounded-2xl md:bg-white md:bg-opacity-5 hover:bg-gray-100 md:hover:scale-105 md:hover:text-blue-700 md:p-2 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:bg-opacity-20 dark:hover:text-white md:dark:hover:scale-105  dark:border-gray-700"
               >
                 Inicio
               </Link>
