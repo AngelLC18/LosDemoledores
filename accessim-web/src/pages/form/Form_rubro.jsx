@@ -7,7 +7,7 @@ import { Textarea } from "@material-tailwind/react";
 
 const Form_rubro = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mt-20">
+    <div className="flex flex-col items-center justify-center min-h-screen mt-20 dark:bg-gray-800">
       <header>
         <Navbar />
       </header>
