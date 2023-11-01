@@ -22,5 +22,5 @@ class GoogleMapPopup extends Component {
       );
     }
   }export default GoogleApiWrapper({
-    apiKey: "TU_API_KEY_DE_GOOGLE_MAPS", 
+    apiKey: "necesitamos una api key", 
   })(GoogleMapPopup);
