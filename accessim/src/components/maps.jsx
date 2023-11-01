@@ -7,3 +7,18 @@ class GoogleMapPopup extends Component {
         width: "300px",
         height: "200px",
       };
+      return (
+        <div className="map-popup">
+          <Map
+            google={this.props.google}
+            zoom={14} 
+            style={mapStyles}
+            initialCenter={{
+              lat: 37.7749,
+              lng: -122.4194, 
+            }}
+          />
+        </div>
+      );
+    }
+  }
