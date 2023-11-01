@@ -8,7 +8,7 @@ class GoogleMapPopup extends Component {
         height: "200px",
       };
       return (
-        <div className="map-popup">
+        <div className="map">
           <Map
             google={this.props.google}
             zoom={14} 
