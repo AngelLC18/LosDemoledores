@@ -97,7 +97,7 @@ export const Login = () => {
           ></img>
         </button>
         <button
-          className="flex w-full justify-center rounded-md border border-gray-900 bg-gray-800 hover:bg-purple-800 duration-200 hover:border-gray-700 py-2 leading-6  shadow-sm"
+          className="flex w-full justify-center rounded-md border border-gray-900 bg-gray-800 dark:bg-purple-800 dark:hover:bg-purple-950 hover:bg-purple-800 duration-200 hover:border-gray-700 py-2 leading-6  shadow-sm"
           onClick={startGithubSignIn}
         >
           <BsGithub className="text-xl" />
