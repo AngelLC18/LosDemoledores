@@ -18,7 +18,7 @@ const Home = () => {
                 <p class="mt-6 text-xl leading-8 text-gray-700">Registrate</p>
                 <p class="mt-6 text-xl leading-8 text-gray-700">Filtra las categorías que buscas y necesidades que tenes</p>
                 <h1 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">¿Quieres que tu empresa aparezca en nuestro mapa?</h1>
-                <p class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">Unite</p>
+                <a href="#" class="rounded-md bg-indigo-600 dark:bg-indigo-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Unite</a>
             </div>
         </div>
     );
