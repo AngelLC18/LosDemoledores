@@ -6,7 +6,7 @@ import Accesibility_tools from "../../components/Accessibility_tools";
 
 const Home = () => {
     return (
-        <div className="home-container">
+        <div className="home-container" >
             <Navbar />
             <div className="home-text-section">
                 <h1 className="home-title" class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight" >Bienvenido a Accessim</h1>
