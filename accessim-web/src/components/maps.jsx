@@ -9,7 +9,7 @@ const Mapa = ({ ubicacion }) => {
 
   return (
     <LoadScript
-      googleMapsApiKey="TU_API_KEY_DE_GOOGLE_MAPS"
+      googleMapsApiKey="falta api"
     >
       <GoogleMap
         mapContainerStyle={mapStyles}
