@@ -6,10 +6,10 @@ import Accesibility_tools from "../../components/Accessibility_tools";
 
 const Home = () => {
     return (
-        <div className=" w-full h-screen grid grid-rows-3 dark:bg-slate-950 bg-orange-100" >
+        <div class=" flex flex-col items-center max-w-6xl dark:bg-slate-950 bg-orange-100 mx-auto py-8 px-4">
             <Navbar />
-            <main>
-            <section class="bg-white dark:bg-gray-900">
+            <main class="flex flex-col items-center ">
+            <section class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400"> 
                         <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Bienvenido a Accessim</h1>
@@ -20,7 +20,7 @@ const Home = () => {
                     </div>
                 </div>    
             </section>
-            <section class="bg-white dark:bg-gray-900">
+            <section class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div>
                         <img src="src\assets\mappage.png"></img>
@@ -33,7 +33,7 @@ const Home = () => {
                 </div>
                 
             </section>
-            <section class="bg-white dark:bg-gray-900">
+            <section class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                         <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Accedé de manera rápida y sencilla</h1>
