@@ -6,10 +6,10 @@ import Accesibility_tools from "../../components/Accessibility_tools";
 
 const Home = () => {
     return (
-        <div class=" flex flex-col items-center max-w-6xl dark:bg-slate-950 bg-orange-100 mx-auto py-8 px-4">
+        <div class=" flex flex-col items-center  dark:bg-slate-950 bg-orange-100 mx-auto py-8 px-4">
             <Navbar />
             <main class="flex flex-col items-center ">
-            <section class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4">
+            <section class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4 ">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400"> 
                         <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Bienvenido a Accessim</h1>
@@ -17,6 +17,19 @@ const Home = () => {
                     </div> 
                     <div class="grid grid-cols-2 gap-4 mt-8">
                         <img src="src\assets\accessim-logo.png"></img>
+                        <div class="bg-white dark:bg-gray-900 items-center py-8 px-4 mx-auto max-w-screen-xl">
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">¿Queres que tu empresa aparezca en nuestro mapa?</h2>
+                    </a>
+                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Registrate
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
                     </div>
                 </div>    
             </section>
@@ -54,19 +67,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <div class="bg-white dark:bg-gray-900 items-center py-8 px-4 mx-auto max-w-screen-xl">
-                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">¿Queres que tu empresa aparezca en nuestro mapa?</h2>
-                    </a>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Registrate
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+            
             </main>
             <Accesibility_tools />
         </div>
