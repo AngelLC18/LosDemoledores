@@ -12,14 +12,13 @@ import { getErrorMessageFromFirebaseError } from "../utils/getErrorMessageFromFi
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
-export const singInWithGithub = async () => {
+export const signInWithGithub = async () => {
   try {
-    const result = await signInWithPopup(FirebaseAuth, githubProvider);
+    const result = await signInWithPopup(auth, githubProvider);
     const { displayName, email, photoURL, uid } = result.user;
 
     return {
       ok: true,
-      // User info
       displayName,
       email,
       photoURL,
