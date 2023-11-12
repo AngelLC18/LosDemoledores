@@ -53,15 +53,21 @@ const Home = () => {
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
                         <div class="flex flex-row items-center gap-4 font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                            <img src="src\assets\register.svg"></img>
+                            <div class="bg-orange-500 rounded-full items-center px-2 py-2">
+                                <img src="src\assets\register.svg"></img>
+                            </div>
                             <p class="mb-4 font-bold">Registrate</p>
                         </div>
                         <div class="flex flex-row items-center gap-4 font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                            <div class="bg-orange-500 rounded-full items-center px-2 py-2">
                             <img src="src\assets\categorias.svg"></img>
+                            </div>
                             <p class="mb-4 font-bold">Filtra las categorías que buscas y necesidades que tenes</p>
                         </div> 
                         <div class="flex flex-row items-center gap-4 font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                            <img src="src\assets\location-sharp.svg"></img>
+                            <div class="bg-orange-500 rounded-full items-center px-2 py-2">
+                                <img src="src\assets\location-sharp.svg"></img>
+                            </div>
                             <p class="mb-4 font-bold">Encontrá el lugar que mas se adapte a lo que necesitas</p>
                         </div>  
                     </div>
