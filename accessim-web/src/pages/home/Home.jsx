@@ -6,9 +6,9 @@ import Accesibility_tools from "../../components/Accessibility_tools";
 
 const Home = () => {
     return (
-        <div class=" flex flex-col items-center  dark:bg-slate-950 bg-orange-100 mx-auto py-8 px-4">
+        <div class=" flex flex-col items-center  dark:bg-slate-950 bg-orange-100  mx-auto py-12 px-4">
             <Navbar />
-            <main class="flex flex-col items-center ">
+            <main class="flex flex-col items-center m-4 gap-4">
             <section class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4 ">
                 <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400"> 
@@ -17,8 +17,8 @@ const Home = () => {
                     </div> 
                     <div class="grid grid-cols-2 gap-4 mt-8">
                         <img src="src\assets\accessim-logo.png"></img>
-                        <div class="bg-white dark:bg-gray-900 items-center py-8 px-4 mx-auto max-w-screen-xl">
-                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div class="bg-white dark:bg-gray-800 items-center py-8 px-4 mx-auto max-w-screen-xl">
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-600">
                     <a href="#">
                         <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">¿Queres que tu empresa aparezca en nuestro mapa?</h2>
                     </a>
