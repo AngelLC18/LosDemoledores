@@ -18,7 +18,7 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <nav className="bg-transparent dark:bg-slate-900 fixed w-full z-20 top-0 left-0 transition-all">
+    <nav className="bg-transparent dark:bg-slate-900 fixed w-full z-20 top-0 left-0 transition-all" >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
         <a href="http://epet20.com.ar/">
           <i className="fa-solid fa-code dark:text-white"></i>
