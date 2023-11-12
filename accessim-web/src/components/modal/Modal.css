@@ -1,0 +1,22 @@
+.modal{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75) ;
+    align-items: center;
+}
+
+.modal.is-open{
+    display: flex;
+}
+
+.modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
