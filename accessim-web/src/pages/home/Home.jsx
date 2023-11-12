@@ -6,7 +6,7 @@ import Accesibility_tools from "../../components/Accessibility_tools";
 
 const Home = () => {
     return (
-        <div class=" flex flex-col items-center  dark:bg-slate-950 bg-orange-100  mx-auto py-12 px-4">
+        <div class=" flex flex-col items-center bg-[url('/src/assets/uno.jpg')] mx-auto py-12 px-4">
             <Navbar />
             <main class="flex flex-col items-center m-4 gap-4">
             <section class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 py-8 px-4 ">
