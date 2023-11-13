@@ -1,9 +1,11 @@
+import "../../index.css";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/NavBar";
 import { Input } from "@material-tailwind/react";
 import { Select, Option } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
 import { Textarea } from "@material-tailwind/react";
+import InputForm from "../form/components/Input";
 
 const Form_rubro = () => {
   return (
@@ -16,11 +18,10 @@ const Form_rubro = () => {
           <h1 className="text-black dark:text-white font-extrabold">
             Registra tu empresa
           </h1>
-
           <div className="flex w-72 flex-col gap-6 mt-5">
+            <InputForm />
             <Input color="teal" label="Nombre" />
             <Input color="teal" label="Horario" />
-            <Input color="teal" label="Ubicación" />
           </div>
           <div className="flex w-72 flex-col gap-6 mt-5">
             <Select color="teal" label="Zona">
@@ -30,6 +31,9 @@ const Form_rubro = () => {
               <Option>Este</Option>
               <Option>Oeste</Option>
             </Select>
+          </div>
+          <div className="flex w-72 flex-col gap-6 mt-5">
+            <Input color="teal" label="Ubicación" />
           </div>
           <div className="flex w-96 flex-col gap-6 mt-5">
             <Textarea color="grey" label="Descripción" />
@@ -41,7 +45,6 @@ const Form_rubro = () => {
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
