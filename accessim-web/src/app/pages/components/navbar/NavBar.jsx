@@ -3,16 +3,15 @@ import { useEffect, useState } from "react";
 import DarkMode from "../../../../components/darkmode/DarkMode";
 import { Text } from "../../../../components";
 import { useAuth } from "../../../../hooks/useAuth";
-import { LuLogOut } from "react-icons/lu";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [avatarOpen, setAvatarOpen] = useState(false);
-
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const handleSidebarToggle = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
-  };
-  const handleAvatarToggle = () => {
-    setAvatarOpen(!avatarOpen);
   };
 
   const { displayName, photoURL, startLogout } = useAuth();
@@ -34,52 +33,6 @@ const Navbar = () => {
         <a className="ml-12 md:ml-0" href="http://epet20.com.ar/">
           <i className="fa-solid fa-code dark:text-white"></i>
         </a>
-        <div className="flex md:order-2">
-          <div className="flex flex-col relative">
-            <button className="">
-              <img
-                className="w-10 h-10 text-gray-200 rounded-full"
-                src={avatar}
-                alt={`Avatar ${displayName}`}
-                onClick={handleAvatarToggle}
-              />
-            </button>
-            <div
-              className={`flex flex-col items-start p-2 top-12 absolute font-medium border w-[50px]  bg-gray-50 rounded-md   dark:bg-gray-800  dark:border-gray-700" ${
-                avatarOpen ? "flex" : "hidden"
-              }`}
-            >
-              <Text>{displayName}</Text>
-              <div>
-                <LuLogOut
-                  onClick={startLogout}
-                  className="text-2xl cursor-pointer dark:text-white"
-                />
-              </div>
-            </div>
-          </div>
-          <DarkMode />
-          <button
-            type="button"
-            className=" absolute top-3 left-2 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            onClick={handleMenuToggle}
-          >
-            <span className="sr-only">Abrir menu</span>
-            <svg
-              className="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
         <div
           className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
             menuOpen ? "flex" : "hidden"
@@ -112,6 +65,78 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+        </div>
+        <div className="flex md:order-2">
+          <DarkMode />
+          <div className="flex flex-col relative justify-center items-center">
+            <button
+              className={`w-10 h-10 text-gray-200 rounded-full ${
+                sidebarOpen ? "invisible" : "visible"
+              }`}
+              onClick={handleSidebarToggle}
+            >
+              <img
+                className="w-10 h-10 text-gray-200 rounded-full"
+                src={avatar}
+                alt={`Avatar ${displayName}`}
+              />
+            </button>
+            <div
+              className={`fixed top-0 right-0 p-4 w-64 h-full z-40 bg-gray-50 rounded-l-lg dark:bg-gray-800 transition-transform transform ${
+                sidebarOpen ? "translate-x-0" : "translate-x-full"
+              }`}
+            >
+              {sidebarOpen && (
+                <div className="flex items-center space-x-2">
+                  <button onClick={handleSidebarToggle}>
+                    <img
+                      className="w-10 h-10 text-gray-200 rounded-full"
+                      src={avatar}
+                      alt={`Avatar ${displayName}`}
+                    />
+                  </button>
+                  <Text>{displayName}</Text>
+                </div>
+              )}
+              <div className="flex flex-col mt-3  items-start m-0">
+                {displayName && (
+                  <Link
+                    className="dark:text-white w-full rounded-md p-1 px-2 text-start hover:bg-gray-200 dark:hover:bg-slate-700"
+                    to={`/user/${displayName}`}
+                  >
+                    Ver perfil
+                  </Link>
+                )}
+                <button
+                  className="dark:text-white w-full rounded-md p-1 px-2 text-start hover:bg-gray-200 dark:hover:bg-slate-700"
+                  onClick={startLogout}
+                >
+                  Cerrar Sesión
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            className=" absolute top-3 left-2 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            onClick={handleMenuToggle}
+          >
+            <span className="sr-only">Abrir menu</span>
+            <svg
+              className="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
