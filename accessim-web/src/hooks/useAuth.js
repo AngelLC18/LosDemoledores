@@ -5,6 +5,7 @@ import {
   registerUserWithEmailPassword,
   singInWithGoogle,
   singInWithGithub,
+  updateUser,
 } from "../firebase/provider";
 import { checkingCredentials, login, logout } from "../store/auth/authSlice";
 
@@ -17,6 +18,7 @@ export const useAuth = () => {
     dispatch(checkingCredentials());
   }
   async function startGithubSignIn() {
+    console.log("startGithubSignIn called");
     dispatch(checkingCredentials());
     const result = await singInWithGithub();
     if (!result.ok) return dispatch(logout(result));
@@ -51,6 +53,12 @@ export const useAuth = () => {
     dispatch(login(result));
   }
 
+  async function startUpdatingUser({ email, password, displayName }) {
+    const result = await updateUser({ email, password, displayName });
+    if (!result.ok) return { ok: false, errorMessage: result.errorMessage };
+    dispatch(login(result));
+    return { ok: true };
+  }
   async function startLogout() {
     await logoutFirebase();
     dispatch(logout());
@@ -72,5 +80,6 @@ export const useAuth = () => {
     startCreatingUserWithEmailPassword,
     startLoginWithEmailPassword,
     startLogout,
+    startUpdatingUser,
   };
 };
