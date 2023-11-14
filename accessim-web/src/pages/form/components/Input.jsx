@@ -1,5 +1,5 @@
 import "../../../index.css";
-function InputForm(props) {
+function InputForm() {
   return (
     <div className="inputDiv display-flex justify-center items-center">
       <label className="inputLabel relative">
