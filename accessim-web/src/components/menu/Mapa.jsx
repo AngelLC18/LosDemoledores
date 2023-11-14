@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Dropdown, DropdownButton, DropdownItem } from "reactstrap";
 
-const App = () => {
+const Mapa = () => {
     const [categorias, setCategorias] = useState([
       "Celiacos",
       "Diabeticos",
@@ -48,4 +48,4 @@ const App = () => {
       );
     };
     
-    export default App;
+    export default Mapa;

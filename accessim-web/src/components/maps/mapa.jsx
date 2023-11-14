@@ -10,7 +10,6 @@ const App = () => {
         <h1>Contenido en el Lado Izquierdo</h1>
         
       </div>
-
       <div style={{ flex: 1, position: 'relative' }}>
         <Mapa ubicacion={ubicacion} />
       </div>
