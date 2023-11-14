@@ -107,6 +107,11 @@ function Form_rubro() {
       return;
     }
 
+    if (!horario.trim()) {
+      setError("El horario no puede estar vacío");
+      return;
+    }
+
     try {
       await addDoc(collection(FirebaseDB, "locales"), { nombre });
 
