@@ -24,7 +24,7 @@ export const Register = () => {
     <Layout title="Registro">
       <form
         onSubmit={handleSubmit}
-        className=" flex flex-col flex-wrap dark:bg-slate-700 bg-white w-auto p-6 rounded-lg"
+        className=" flex flex-col flex-wrap dark:bg-slate-700 gap-3 bg-white w-auto p-6 rounded-lg"
         action="#"
         method="POST"
       >
@@ -45,12 +45,8 @@ export const Register = () => {
             </span>
           </label>
         </div>
-
-        <div>
-          <label htmlFor="email" className={labelStyled}>
-            Correo Electronico
-          </label>
-          <div className="mt-2 w">
+        <div className="mt-2">
+          <label htmlFor="email" className="relative cursor-text">
             <input
               id="email"
               name="email"
@@ -58,18 +54,17 @@ export const Register = () => {
               autoComplete="email"
               required
               placeholder="Correo electronico"
-              className={inputStyled}
+              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
               onChange={onChange}
               value={email}
             />
-          </div>
-        </div>
-
-        <div>
-          <label htmlFor="password " className={labelStyled}>
-            Contraseña
+            <span className="text-opacity-80 dark:text-white   dark:bg-slate-700 text-gray-600 bg-white absolute left-3 -top-[2px] px-1 transition duration-200 input-text">
+              Correo Electronico
+            </span>
           </label>
-          <div className="mt-2">
+        </div>
+        <div className="mt-2">
+          <label htmlFor="password" className="relative cursor-text">
             <input
               id="password"
               name="password"
@@ -77,13 +72,16 @@ export const Register = () => {
               autoComplete="current-password"
               required
               placeholder="contraseña"
-              className={inputStyled}
               onChange={onChange}
               value={password}
               pattern=".{8,16}"
               title="La contraseña debe tener entre 8 y 16 caracteres"
+              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
             />
-          </div>
+            <span className="text-opacity-80 dark:text-white   dark:bg-slate-700 text-gray-600 bg-white absolute left-3 -top-[2px] px-1 transition duration-200 input-text">
+              Contraseña
+            </span>
+          </label>
         </div>
 
         <div className={`${!!errorMessage ? "block" : "hidden"}`}>
