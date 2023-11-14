@@ -112,6 +112,11 @@ function Form_rubro() {
       return;
     }
 
+    if (!ubicacion.trim()) {
+      setError("La ubicación no puede estar vacía");
+      return;
+    }
+
     try {
       await addDoc(collection(FirebaseDB, "locales"), { nombre });
 
