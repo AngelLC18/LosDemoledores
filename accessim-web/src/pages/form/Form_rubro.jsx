@@ -169,8 +169,17 @@ function Form_rubro() {
         />
       </label>
 
+      <label>
+        Descripción:
+        <textarea
+          placeholder="Descripción"
+          value={descripcion}
+          onChange={handleDescripcionChange}
+        />
+      </label>
+
       {error && <p>{error}</p>}
-      <button type="submit">Guardar</button>
+      <button type="submit">Registrar mi local</button>
     </form>
   );
 }
