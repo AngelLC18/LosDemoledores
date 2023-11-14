@@ -111,6 +111,10 @@ function Form_rubro() {
       await addDoc(collection(FirebaseDB, "locales"), { nombre });
 
       setNombre("");
+      setHorario("");
+      setZona("");
+      setUbicacion("");
+      setDescripcion("");
       setError(null);
       ("Nombre guardado exitosamente");
     } catch (error) {
