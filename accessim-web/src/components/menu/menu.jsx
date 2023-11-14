@@ -23,3 +23,29 @@ const App = () => {
           setItems(data.items);
         });
     }, []);
+
+    return (
+        <div>
+          <h1>Accessim</h1>
+          <div>
+            <DropdownButton title="Categorías" id="categorias-dropdown">
+              {categorias.map((categoria) => (
+                <DropdownItem key={categoria.id} value={categoria.id}>
+                  {categoria.nombre}
+                </DropdownItem>
+              ))}
+            </DropdownButton>
+            <ul id="items-list">
+              {items.filter((item) => item.categoria === categorias[0].id).map((item) => (
+                <li key={item.id}>
+                  <img src={item.imagen} alt={item.nombre} />
+                  <p>{item.nombre}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      );
+    };
+    
+    export default App;
