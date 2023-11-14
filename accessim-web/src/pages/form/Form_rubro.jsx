@@ -116,9 +116,10 @@ function Form_rubro() {
       setUbicacion("");
       setDescripcion("");
       setError(null);
-      ("Nombre guardado exitosamente");
+
+      alert("Registro realizado con éxito!");
     } catch (error) {
-      setError("Error al guardar el nombre: " + error.message);
+      setError("Error al guardar los datos: " + error.message);
     }
   };
 
