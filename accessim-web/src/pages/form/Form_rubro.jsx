@@ -1,53 +1,138 @@
-import "../../index.css";
-import Footer from "../../components/footer/Footer";
+/*import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/NavBar";
-import { Input } from "@material-tailwind/react";
-import { Select, Option } from "@material-tailwind/react";
-import { Button } from "@material-tailwind/react";
-import { Textarea } from "@material-tailwind/react";
-import InputForm from "../form/components/Input";
 
 const Form_rubro = () => {
   return (
+    const = 
     <div className="flex flex-col items-center justify-center min-h-screen mt-20 dark:bg-gray-800">
       <header>
         <Navbar />
       </header>
       <main>
-        <div className="bg-white dark:bg-gray-800 border border-black rounded-xl p-20 m-20-20-20-30 mb-40">
-          <h1 className="text-black dark:text-white font-extrabold">
-            Registra tu empresa
-          </h1>
-          <div className="flex w-72 flex-col gap-6 mt-5">
-            <InputForm />
-            <Input color="teal" label="Nombre" />
-            <Input color="teal" label="Horario" />
-          </div>
-          <div className="flex w-72 flex-col gap-6 mt-5">
-            <Select color="teal" label="Zona">
-              <Option>Centro</Option>
-              <Option>Sur</Option>
-              <Option>Norte</Option>
-              <Option>Este</Option>
-              <Option>Oeste</Option>
-            </Select>
-          </div>
-          <div className="flex w-72 flex-col gap-6 mt-5">
-            <Input color="teal" label="Ubicación" />
-          </div>
-          <div className="flex w-96 flex-col gap-6 mt-5">
-            <Textarea color="grey" label="Descripción" />
-          </div>
-          <div className="flex items-center justify-center mt-5">
-            <Button variant="gradient" className="rounded-full color-red">
-              Registrar mi local
-            </Button>
-          </div>
-        </div>
+        <input type="text"></input>
       </main>
       <Footer />
     </div>
   );
 };
+
+export default Form_rubro;
+*/
+
+/*
+getFirestore;
+import { getFirestore } from "firebase/firestore/lite";
+import { useState } from "react";
+
+function Form_rubro() {
+  const [nombre, setNombre] = useState("");
+
+  // Manejar cambios en el input de nombre
+  const handleNombreChange = (event) => {
+    setNombre(event.target.value);
+  };
+
+  // Manejar el envío del formulario
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      // Guardar el nombre en la base de datos de Firebase
+      const db = getFirestore();
+      await db.collection("locales").add({ nombre });
+
+      // Limpiar el estado del nombre después de guardar en la base de datos
+      setNombre("");
+      alert("Nombre guardado exitosamente");
+    } catch (error) {
+      console.error("Error al guardar el nombre:", error.message);
+    }
+  };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <label>
+        Nombre:
+        <input
+          type="text"
+          placeholder="Nombre"
+          value={nombre}
+          onChange={handleNombreChange}
+        />
+      </label>
+      <button type="submit">Guardar</button>
+    </form>
+  );
+}
+export default Form_rubro;
+*/
+
+import { useState } from "react";
+import { collection, addDoc } from "firebase/firestore/lite";
+import { FirebaseDB } from "../../services/firebaseConfig";
+
+function Form_rubro() {
+  const [nombre, setNombre] = useState("");
+  const [horario, setHorario] = useState("");
+  const [zona, setZona] = useState("");
+  const [ubicacion, setUbicacion] = useState("");
+  const [descripcion, setDescripcion] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleNombreChange = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const handleHorarioChange = (event) => {
+    setHorario(event.target.value);
+  };
+
+  const handleZonaChange = (event) => {
+    setZona(event.target.value);
+  };
+
+  const handleUbicacionChange = (event) => {
+    setUbicacion(event.target.value);
+  };
+
+  const handleDescripcionChange = (event) => {
+    setDescripcion(event.target.value);
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!nombre.trim()) {
+      setError("El nombre no puede estar vacío");
+      return;
+    }
+
+    try {
+      await addDoc(collection(FirebaseDB, "locales"), { nombre });
+
+      setNombre("");
+      setError(null);
+      ("Nombre guardado exitosamente");
+    } catch (error) {
+      setError("Error al guardar el nombre: " + error.message);
+    }
+  };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <label>
+        Nombre:
+        <input
+          type="text"
+          placeholder="Nombre"
+          value={nombre}
+          onChange={handleNombreChange}
+        />
+      </label>
+      {error && <p>{error}</p>}
+      <button type="submit">Guardar</button>
+    </form>
+  );
+}
 
 export default Form_rubro;
