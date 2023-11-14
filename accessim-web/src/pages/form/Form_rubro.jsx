@@ -145,6 +145,20 @@ function Form_rubro() {
         />
       </label>
 
+      <label>
+        Zona:
+        <select value={zona} onChange={handleZonaChange}>
+          <option value="" disabled>
+            Selecciona una zona
+          </option>
+          <option value="norte">Norte</option>
+          <option value="sur">Sur</option>
+          <option value="este">Este</option>
+          <option value="oeste">Oeste</option>
+          <option value="centro">Centro</option>
+        </select>
+      </label>
+
       {error && <p>{error}</p>}
       <button type="submit">Guardar</button>
     </form>
