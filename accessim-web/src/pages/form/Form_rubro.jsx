@@ -134,6 +134,17 @@ function Form_rubro() {
           onChange={handleNombreChange}
         />
       </label>
+
+      <label>
+        Horario:
+        <input
+          type="text"
+          placeholder="Horario"
+          value={horario}
+          onChange={handleHorarioChange}
+        />
+      </label>
+
       {error && <p>{error}</p>}
       <button type="submit">Guardar</button>
     </form>
