@@ -37,7 +37,7 @@ export const User = () => {
         <h1 className="mb-4 text-2xl font-bold text-gray-700">Perfil</h1>
         <form
           onSubmit={handleSubmit}
-          className="p-6 mt-4 bg-white w-[85%] rounded shadow-md grid grid-cols-2 gap-4 text-black"
+          className="p-6 mt-4 bg-white w-[85%] h-[500px] rounded-md shadow-md grid grid-cols-2 gap-4 text-black"
         >
           <div className="form-group">
             <label className="text-gray-700">Correo actual:</label>
