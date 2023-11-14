@@ -159,6 +159,16 @@ function Form_rubro() {
         </select>
       </label>
 
+      <label>
+        Ubicación:
+        <input
+          type="text"
+          placeholder="Ubicación"
+          value={ubicacion}
+          onChange={handleUbicacionChange}
+        />
+      </label>
+
       {error && <p>{error}</p>}
       <button type="submit">Guardar</button>
     </form>
