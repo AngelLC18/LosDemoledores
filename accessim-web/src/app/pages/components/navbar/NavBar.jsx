@@ -99,14 +99,13 @@ const Navbar = () => {
                 </div>
               )}
               <div className="flex flex-col mt-3  items-start m-0">
-                {displayName && (
-                  <Link
-                    className="dark:text-white w-full rounded-md p-1 px-2 text-start hover:bg-gray-200 dark:hover:bg-slate-700"
-                    to={`/user/${displayName}`}
-                  >
-                    Ver perfil
-                  </Link>
-                )}
+                <Link
+                  className="dark:text-white w-full rounded-md p-1 px-2 text-start hover:bg-gray-200 dark:hover:bg-slate-700"
+                  to={`/user/${displayName}`}
+                >
+                  Ver perfil
+                </Link>
+
                 <button
                   className="dark:text-white w-full rounded-md p-1 px-2 text-start hover:bg-gray-200 dark:hover:bg-slate-700"
                   onClick={startLogout}
