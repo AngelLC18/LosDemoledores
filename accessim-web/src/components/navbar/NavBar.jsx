@@ -61,14 +61,7 @@ const Navbar = () => {
                 Inicio
               </Link>
             </li>
-            <li>
-              <Link
-                to="/"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded-2xl md:bg-white md:bg-opacity-5 hover:bg-gray-100 md:hover:scale-105 md:hover:text-blue-700 md:p-2 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:bg-opacity-20  dark:hover:text-white md:dark:hover:scale-105  dark:border-gray-700"
-              >
-                Locales
-              </Link>
-            </li>
+            
             <li>
               <Link
                 to="/"
