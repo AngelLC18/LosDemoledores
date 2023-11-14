@@ -70,6 +70,7 @@ export default Form_rubro;
 import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { FirebaseDB } from "../../services/firebaseConfig";
+import Navbar from "../../components/navbar/NavBar";
 
 function Form_rubro() {
   const [nombre, setNombre] = useState("");
@@ -140,63 +141,68 @@ function Form_rubro() {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
-        Nombre:
-        <input
-          type="text"
-          placeholder="Nombre"
-          value={nombre}
-          onChange={handleNombreChange}
-        />
-      </label>
+    <div>
+      <header>
+        <Navbar />
+      </header>
+      <form onSubmit={handleFormSubmit}>
+        <label>
+          Nombre:
+          <input
+            type="text"
+            placeholder="Nombre"
+            value={nombre}
+            onChange={handleNombreChange}
+          />
+        </label>
 
-      <label>
-        Horario:
-        <input
-          type="text"
-          placeholder="Horario"
-          value={horario}
-          onChange={handleHorarioChange}
-        />
-      </label>
+        <label>
+          Horario:
+          <input
+            type="text"
+            placeholder="Horario"
+            value={horario}
+            onChange={handleHorarioChange}
+          />
+        </label>
 
-      <label>
-        Zona:
-        <select value={zona} onChange={handleZonaChange}>
-          <option value="" disabled>
-            Selecciona una zona
-          </option>
-          <option value="norte">Norte</option>
-          <option value="sur">Sur</option>
-          <option value="este">Este</option>
-          <option value="oeste">Oeste</option>
-          <option value="centro">Centro</option>
-        </select>
-      </label>
+        <label>
+          Zona:
+          <select value={zona} onChange={handleZonaChange}>
+            <option value="" disabled>
+              Selecciona una zona
+            </option>
+            <option value="norte">Norte</option>
+            <option value="sur">Sur</option>
+            <option value="este">Este</option>
+            <option value="oeste">Oeste</option>
+            <option value="centro">Centro</option>
+          </select>
+        </label>
 
-      <label>
-        Ubicación:
-        <input
-          type="text"
-          placeholder="Ubicación"
-          value={ubicacion}
-          onChange={handleUbicacionChange}
-        />
-      </label>
+        <label>
+          Ubicación:
+          <input
+            type="text"
+            placeholder="Ubicación"
+            value={ubicacion}
+            onChange={handleUbicacionChange}
+          />
+        </label>
 
-      <label>
-        Descripción:
-        <textarea
-          placeholder="Descripción"
-          value={descripcion}
-          onChange={handleDescripcionChange}
-        />
-      </label>
+        <label>
+          Descripción:
+          <textarea
+            placeholder="Descripción"
+            value={descripcion}
+            onChange={handleDescripcionChange}
+          />
+        </label>
 
-      {error && <p>{error}</p>}
-      <button type="submit">Registrar mi local</button>
-    </form>
+        {error && <p>{error}</p>}
+        <button type="submit">Registrar mi local</button>
+      </form>
+    </div>
   );
 }
 
