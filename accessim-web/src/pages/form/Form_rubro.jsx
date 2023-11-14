@@ -66,11 +66,14 @@ function Form_rubro() {
 }
 export default Form_rubro;
 */
+////////////////////////////////////
 
 import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { FirebaseDB } from "../../services/firebaseConfig";
 import Navbar from "../../components/navbar/NavBar";
+import Footer from "../../components/footer/Footer";
+import "./Form_rubro.css";
 
 function Form_rubro() {
   const [nombre, setNombre] = useState("");
@@ -141,32 +144,22 @@ function Form_rubro() {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <header>
         <Navbar />
       </header>
-      <form onSubmit={handleFormSubmit}>
-        <label>
+      <form className="center-form" onSubmit={handleFormSubmit}>
+        <label className="label file:nom">
           Nombre:
-          <input
-            type="text"
-            placeholder="Nombre"
-            value={nombre}
-            onChange={handleNombreChange}
-          />
+          <input type="text" value={nombre} onChange={handleNombreChange} />
         </label>
 
-        <label>
+        <label className="label horario">
           Horario:
-          <input
-            type="text"
-            placeholder="Horario"
-            value={horario}
-            onChange={handleHorarioChange}
-          />
+          <input type="text" value={horario} onChange={handleHorarioChange} />
         </label>
 
-        <label>
+        <label className="label zona">
           Zona:
           <select value={zona} onChange={handleZonaChange}>
             <option value="" disabled>
@@ -180,28 +173,30 @@ function Form_rubro() {
           </select>
         </label>
 
-        <label>
+        <label className="label ubi">
           Ubicación:
           <input
             type="text"
-            placeholder="Ubicación"
             value={ubicacion}
             onChange={handleUbicacionChange}
           />
         </label>
 
-        <label>
+        <label className="label desc">
           Descripción:
           <textarea
-            placeholder="Descripción"
+            placeholder="Describe tu local aqui"
             value={descripcion}
             onChange={handleDescripcionChange}
           />
         </label>
 
         {error && <p>{error}</p>}
-        <button type="submit">Registrar mi local</button>
+        <button className="boton" type="submit">
+          Registrar mi local
+        </button>
       </form>
+      <Footer />
     </div>
   );
 }
