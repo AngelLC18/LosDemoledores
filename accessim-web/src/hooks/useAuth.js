@@ -65,7 +65,7 @@ export const useAuth = () => {
   }
 
   return {
-    // props
+    // promesas
     status,
     uid,
     email,
@@ -73,7 +73,7 @@ export const useAuth = () => {
     photoURL,
     errorMessage,
 
-    // methods
+    // metodos
     checkingAuthentication,
     startGoogleSignIn,
     startGithubSignIn,
