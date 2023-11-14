@@ -1,51 +1,55 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Dropdown, DropdownButton, DropdownItem } from "reactstrap";
+import React, { useState, useEffect } from "react";
+
 
 const Mapa = () => {
-    const [categorias, setCategorias] = useState([
-      "Celiacos",
-      "Diabeticos",
-      "Hipertensos",
-      "Veganos",
-      "Vegetarianos",
-    ]);
+  const [categorias, setCategorias] = useState([
+    "Celiacos",
+    "Diabeticos",
+    "Hipertensos",
+    "Veganos",
+    "Vegetarianos",
+  ]);
 
-    const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
 
-    useEffect(() => {
-      // Obtener las categorías y los elementos de la API
-      const url = "https://www.google.com.ar/maps/@-38.9495443,-68.0575857,14.76z?entry=ttu";
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          setCategorias(data.categorias);
-          setItems(data.items);
-        });
-    }, []);
+  useEffect(() => {
+    // Obtener las categorías y los elementos de la API
+    const url = "https://www.google.com.ar/maps/@-38.9495443,-68.0575857,14.76z?entry=ttu";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setCategorias(data.categorias);
+        setItems(data.items);
+      });
+  }, []);
 
-    return (
-        <div>
-          <h1>Accessim</h1>
-          <div>
-            <DropdownButton title="Categorías" id="categorias-dropdown">
+  return (
+    <div className="container mx-auto">
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <h1 className="text-4xl font-bold mb-4">Accessim</h1>
+        <div className="flex flex-col">
+          <div className="mb-4">
+            <label htmlFor="categorias-dropdown" className="block mb-2 font-medium text-gray-700">Categorías</label>
+            <select id="categorias-dropdown" className="border p-2 rounded-md" value={categorias[0].id} onChange={(e) => setCategorias(categorias.filter((categoria) => categoria.id === e.target.value))}>
               {categorias.map((categoria) => (
-                <DropdownItem key={categoria.id} value={categoria.id}>
+                <option key={categoria.id} value={categoria.id}>
                   {categoria.nombre}
-                </DropdownItem>
+                </option>
               ))}
-            </DropdownButton>
-            <ul id="items-list">
-              {items.filter((item) => item.categoria === categorias[0].id).map((item) => (
-                <li key={item.id}>
-                  <img src={item.imagen} alt={item.nombre} />
-                  <p>{item.nombre}</p>
-                </li>
-              ))}
-            </ul>
+            </select>
           </div>
+          <ul id="items-list" className="flex flex-wrap justify-center">
+            {items.map((item) => (
+              <li key={item.id} className="w-64 h-64 p-4 border rounded-md m-2">
+                <img src={item.imagen} alt={item.nombre} className="w-full h-full object-cover" />
+                <p className="text-gray-700 font-medium">{item.nombre}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      );
-    };
-    
-    export default Mapa;
+      </div>
+    </div>
+  );
+};
+
+export default Mapa;
