@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar/NavBar";
 import Footer from "../../components/footer/Footer";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AccessibilityMenu from "../../components/acc";
 const Index = () => {
   const [usuario, setUsuario] = useState({
