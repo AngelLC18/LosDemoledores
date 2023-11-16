@@ -1,7 +1,6 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "../pages/Index";
-import Login from "../pages/login/Login";
+import Index from "./Index";
+import Form_rubro from "../form/Form_rubro";
 
 const Rutas = () => {
   return (
