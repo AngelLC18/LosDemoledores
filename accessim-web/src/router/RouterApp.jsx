@@ -19,7 +19,7 @@ export const RouterApp = () => {
         <Route path="/auth/*" element={<RouterAuth />} />
       )}
 
-      <Route path="/*" element={<Navigate to="/auth/login" />} />
+      <Route path="/*" element={<Navigate to="/auth/home" />} />
     </Routes>
   );
 };
