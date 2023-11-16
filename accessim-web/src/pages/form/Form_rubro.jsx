@@ -1,79 +1,10 @@
-/*import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/NavBar";
-
-const Form_rubro = () => {
-  return (
-    const = 
-    <div className="flex flex-col items-center justify-center min-h-screen mt-20 dark:bg-gray-800">
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <input type="text"></input>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default Form_rubro;
-*/
-
-/*
-getFirestore;
-import { getFirestore } from "firebase/firestore/lite";
-import { useState } from "react";
-
-function Form_rubro() {
-  const [nombre, setNombre] = useState("");
-
-  // Manejar cambios en el input de nombre
-  const handleNombreChange = (event) => {
-    setNombre(event.target.value);
-  };
-
-  // Manejar el envío del formulario
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      // Guardar el nombre en la base de datos de Firebase
-      const db = getFirestore();
-      await db.collection("locales").add({ nombre });
-
-      // Limpiar el estado del nombre después de guardar en la base de datos
-      setNombre("");
-      alert("Nombre guardado exitosamente");
-    } catch (error) {
-      console.error("Error al guardar el nombre:", error.message);
-    }
-  };
-
-  return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
-        Nombre:
-        <input
-          type="text"
-          placeholder="Nombre"
-          value={nombre}
-          onChange={handleNombreChange}
-        />
-      </label>
-      <button type="submit">Guardar</button>
-    </form>
-  );
-}
-export default Form_rubro;
-*/
-////////////////////////////////////
-
 import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { FirebaseDB } from "../../services/firebaseConfig";
 import Navbar from "../../components/navbar/NavBar";
 import Footer from "../../components/footer/Footer";
 import "./Form_rubro.css";
+import MultiSelect from "./components/multiselect";
 
 function Form_rubro() {
   const [nombre, setNombre] = useState("");
@@ -171,6 +102,11 @@ function Form_rubro() {
             <option value="oeste">Oeste</option>
             <option value="centro">Centro</option>
           </select>
+        </label>
+
+        <label className="label multiselect">
+          Selccione las habilidades que ofrece su local:
+          <MultiSelect />
         </label>
 
         <label className="label ubi">
