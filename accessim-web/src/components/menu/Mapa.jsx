@@ -13,8 +13,7 @@ const Mapa = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Obtener las categorías y los elementos de la API
-    const url = "https://www.google.com.ar/maps/@-38.9495443,-68.0575857,14.76z?entry=ttu";
+    const url = "AIzaSyAWyMMdLdBrlKRUJUuEjG_CMm-E9KoKdVE";
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
