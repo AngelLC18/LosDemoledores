@@ -1,12 +1,9 @@
 import { Layout } from "./Layout";
-import { AiOutlineGoogle } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import { Ancora, Text } from "../../components/ui";
-import styled from "../../mokups/styled.json";
 import { useAuth, useForm } from "../../hooks";
 
 export const Login = () => {
-  const { inputStyled, labelStyled } = styled;
   const {
     formState: { email, password },
     onChange,

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const Accesibility_tools = () => {
+const Accesibility_tools = ({ onHighContrastChange }) => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen(!open);
@@ -43,6 +43,7 @@ const Accesibility_tools = () => {
     whiteElements.forEach((element) => {
       element.classList.add("dark:bg-black");
     });
+    onHighContrastChange(true);
   };
 
   const negativeContrastMode = () => {
@@ -78,6 +79,7 @@ const Accesibility_tools = () => {
       element.style.removeProperty("font-family");
       element.classList.remove("dark");
     });
+    onHighContrastChange(false);
   };
   return (
     <div

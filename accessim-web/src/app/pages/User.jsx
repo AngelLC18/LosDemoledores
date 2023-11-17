@@ -24,7 +24,6 @@ export const User = () => {
       displayName: newDisplayName,
     });
     if (!result.ok) {
-      // handle error
       console.error("Error updating user");
     } else {
       console.log("User updated successfully");

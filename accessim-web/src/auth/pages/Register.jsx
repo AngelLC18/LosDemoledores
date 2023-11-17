@@ -1,10 +1,8 @@
 import { Ancora } from "../../components/ui";
 import { Layout } from "./Layout";
-import styled from "../../mokups/styled.json";
 import { useAuth, useForm } from "../../hooks";
 
 export const Register = () => {
-  const { inputStyled, labelStyled, spanStyled } = styled;
   const {
     formState: { displayName, email, password },
     onChange,
@@ -24,7 +22,7 @@ export const Register = () => {
     <Layout title="Registro">
       <form
         onSubmit={handleSubmit}
-        className=" flex flex-col flex-wrap dark:bg-slate-700 gap-3 bg-white w-auto p-6 rounded-lg"
+        className=" space-y-4"
         action="#"
         method="POST"
       >
