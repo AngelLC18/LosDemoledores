@@ -3,6 +3,7 @@ import { useState } from "react";
 import Select from "react-select";
 import { FirebaseDB } from "../../../services/firebaseConfig";
 import { addDoc } from "firebase/firestore/lite";
+import "../../form/Form_rubro.css";
 
 const options = [
   { value: "mobilidadReducida", label: "Movilidad Reducida" },
@@ -13,7 +14,7 @@ const options = [
   { value: "cambiadorBebes", label: "Cambiador para Bebes" },
 ];
 
-const MultiSelect = () => {
+function MultiSelect() {
   const [selectedOptions, setSelectedOptions] = useState("");
   const [error, setError] = useState(null);
 
@@ -21,7 +22,7 @@ const MultiSelect = () => {
     setSelectedOptions(selectedOptions);
   };
 
-  const handleFormSubmit = async (event) => {
+  const handleSelectedOptionsSubmit = async (event) => {
     event.preventDefault();
 
     if (!selectedOptions.trim()) {
@@ -43,19 +44,18 @@ const MultiSelect = () => {
   };
 
   return (
-    <div
-      className=""
-      value={selectedOptions}
-      onChange={handleSelectedOptionsChange}
-    >
-      <Select
-        isMulti
-        options={options}
-        value={selectedOptions}
-        onChange={handleSelectedOptionsChange}
-      />
+    <div className="select" onSubmit={handleSelectedOptionsSubmit}>
+      <label className="label multiselect">
+        Selccione las habilidades que ofrece su local:
+        <Select
+          isMulti
+          options={options}
+          value={selectedOptions}
+          onChange={handleSelectedOptionsChange}
+        />
+      </label>
     </div>
   );
-};
+}
 
 export default MultiSelect;

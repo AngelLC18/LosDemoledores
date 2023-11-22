@@ -75,24 +75,38 @@ function Form_rubro() {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container mt-10">
       <header>
         <Navbar />
       </header>
-      <form className="center-form" onSubmit={handleFormSubmit}>
+      <form className="center-form mb-30" onSubmit={handleFormSubmit}>
         <label className="label file:nom">
           Nombre:
-          <input type="text" value={nombre} onChange={handleNombreChange} />
+          <input
+            className="input"
+            type="text"
+            value={nombre}
+            onChange={handleNombreChange}
+          />
         </label>
 
         <label className="label horario">
           Horario:
-          <input type="text" value={horario} onChange={handleHorarioChange} />
+          <input
+            className="input"
+            type="text"
+            value={horario}
+            onChange={handleHorarioChange}
+          />
         </label>
 
         <label className="label zona">
           Zona:
-          <select value={zona} onChange={handleZonaChange}>
+          <select
+            className="input selectZona"
+            value={zona}
+            onChange={handleZonaChange}
+          >
             <option value="" disabled>
               Selecciona una zona
             </option>
@@ -105,13 +119,13 @@ function Form_rubro() {
         </label>
 
         <label className="label multiselect">
-          Selccione las habilidades que ofrece su local:
-          <MultiSelect />
+          <MultiSelect className="input" />
         </label>
 
         <label className="label ubi">
           Ubicación:
           <input
+            className="input"
             type="text"
             value={ubicacion}
             onChange={handleUbicacionChange}
@@ -121,6 +135,7 @@ function Form_rubro() {
         <label className="label desc">
           Descripción:
           <textarea
+            className="input"
             placeholder="Describe tu local aqui"
             value={descripcion}
             onChange={handleDescripcionChange}
@@ -132,7 +147,7 @@ function Form_rubro() {
           Registrar mi local
         </button>
       </form>
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }
