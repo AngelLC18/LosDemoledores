@@ -34,7 +34,7 @@ export const Register = () => {
               type="text"
               required
               placeholder="Usuario"
-              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+              className="h-11 w-full bg-white pl-2 text-black dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
               onChange={onChange}
               value={displayName}
             />
@@ -52,7 +52,7 @@ export const Register = () => {
               autoComplete="email"
               required
               placeholder="Correo electronico"
-              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+              className="h-11 w-full bg-white pl-2 text-black dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
               onChange={onChange}
               value={email}
             />
@@ -74,7 +74,7 @@ export const Register = () => {
               value={password}
               pattern=".{8,16}"
               title="La contraseña debe tener entre 8 y 16 caracteres"
-              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+              className="h-11 w-full bg-white pl-2 text-black dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
             />
             <span className="text-opacity-80 dark:text-white   dark:bg-slate-700 text-gray-600 bg-white absolute left-3 -top-[2px] px-1 transition duration-200 input-text">
               Contraseña

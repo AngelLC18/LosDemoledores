@@ -35,7 +35,7 @@ export const Login = () => {
               autoComplete="email"
               required
               placeholder="Correo electronico"
-              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+              className="h-11 w-full bg-white pl-2 text-black dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
               onChange={onChange}
               value={email}
             />
@@ -53,7 +53,7 @@ export const Login = () => {
               type="password"
               required
               placeholder="Correo electronico"
-              className="h-11 w-full bg-white pl-2 dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+              className="h-11 w-full bg-white pl-2 text-black dark:bg-slate-700 dark:text-white   border-black border-[1px] rounded-[4px] border-opacity-30 outline-none focus:border-blue-700 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
               onChange={onChange}
               value={password}
             />

@@ -6,7 +6,7 @@ export const Layout = ({ title, children }) => {
   const [highContrast, setHighContrast] = useState(false);
   return (
     <div className="flex min-h-screen bg-[url('/src/assets/DreamShaper_v7_cities_and_accesiblity_0.jpg')] w-screen bg-cover text-gray-300 flex-col gap-6 justify-center items-center">
-      <div className="bg-violet-900 dark:bg-slate-900  rounded-lg shadow-lg flex flex-col m-12 md:flex-row w-[60%]">
+      <div className="bg-violet-300 dark:bg-slate-900  rounded-lg shadow-lg flex flex-col m-12 md:flex-row w-[60%]">
         <div className="mx-auto w-full max-w-sm opacity-100 m-3  ">
           <img
             className="mx-auto h-[150px] md:h-[400px] w-auto "
