@@ -32,6 +32,7 @@ transition: background-color 0.3s;
     flex-direction: column;
     margin-bottom: 10px;
     font-size: small;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 

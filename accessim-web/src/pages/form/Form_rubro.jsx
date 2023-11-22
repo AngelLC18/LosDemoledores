@@ -2,7 +2,7 @@ import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { FirebaseDB } from "../../services/firebaseConfig";
 import Navbar from "../../components/navbar/NavBar";
-import Footer from "../../components/footer/Footer";
+//import Footer from "../../components/footer/Footer";
 import "./Form_rubro.css";
 import MultiSelect from "./components/multiselect";
 
@@ -79,8 +79,11 @@ function Form_rubro() {
       <header>
         <Navbar />
       </header>
-      <form className="center-form mb-30" onSubmit={handleFormSubmit}>
-        <label className="label file:nom">
+      <form
+        className="center-form mb-30 bg-blue-gray-50 dark:bg-gray-900"
+        onSubmit={handleFormSubmit}
+      >
+        <label className="label file:nom text-black dark:text-white">
           Nombre:
           <input
             className="input"
@@ -90,7 +93,7 @@ function Form_rubro() {
           />
         </label>
 
-        <label className="label horario">
+        <label className="label horario dark:text-white">
           Horario:
           <input
             className="input"
@@ -100,7 +103,7 @@ function Form_rubro() {
           />
         </label>
 
-        <label className="label zona">
+        <label className="label zona dark:text-white">
           Zona:
           <select
             className="input selectZona"
@@ -118,11 +121,11 @@ function Form_rubro() {
           </select>
         </label>
 
-        <label className="label multiselect">
+        <label className="label multiselect dark:text-white">
           <MultiSelect className="input" />
         </label>
 
-        <label className="label ubi">
+        <label className="label ubi dark:text-white">
           Ubicación:
           <input
             className="input"
@@ -132,7 +135,7 @@ function Form_rubro() {
           />
         </label>
 
-        <label className="label desc">
+        <label className="label desc dark:text-white">
           Descripción:
           <textarea
             className="input"
@@ -143,7 +146,7 @@ function Form_rubro() {
         </label>
 
         {error && <p>{error}</p>}
-        <button className="boton" type="submit">
+        <button className="boton :dark text-white" type="submit">
           Registrar mi local
         </button>
       </form>
