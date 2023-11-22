@@ -4,6 +4,7 @@ import { FirebaseDB } from "../../services/firebaseConfig";
 import Navbar from "../../components/navbar/NavBar";
 import Footer from "../../components/footer/Footer";
 import "./Form_rubro.css";
+import MultiSelect from "./components/multiselect";
 
 function Form_rubro() {
   const [nombre, setNombre] = useState("");
@@ -101,6 +102,11 @@ function Form_rubro() {
             <option value="oeste">Oeste</option>
             <option value="centro">Centro</option>
           </select>
+        </label>
+
+        <label className="label multiselect">
+          Selccione las habilidades que ofrece su local:
+          <MultiSelect />
         </label>
 
         <label className="label ubi">

@@ -1,7 +1,7 @@
-import Navbar from "../components/navbar/NavBar";
-import Footer from "../components/footer/Footer";
+import Navbar from "../../../src/components/navbar/NavBar";
+import Footer from "../../../src/components/footer/Footer";
 import { useState } from "react";
-import Accesibility_tools from "../components/Accessibility_tools";
+import Accesibility_tools from "../../../src/components/Accessibility_tools";
 
 const Index = () => {
   const [usuario, setUsuario] = useState({
