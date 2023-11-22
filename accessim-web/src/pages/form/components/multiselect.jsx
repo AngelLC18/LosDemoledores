@@ -45,7 +45,7 @@ function MultiSelect() {
 
   return (
     <div className="select" onSubmit={handleSelectedOptionsSubmit}>
-      <label className="label multiselect :dark text-white">
+      <label className="label multiselect text-black ">
         Selccione las habilidades que ofrece su local:
         <Select
           isMulti

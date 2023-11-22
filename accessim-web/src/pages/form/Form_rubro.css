@@ -58,8 +58,5 @@ transition: background-color 0.3s;
     border: 2px solid indigo;
 }
   
-.select{
-    background-color: blue;
-    all: unset;
-}
+
 
